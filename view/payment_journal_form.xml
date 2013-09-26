@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- This file is part account_payment_es_csb_19 module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/field[@name=&quot;ine_code&quot;]"
+            position="after">
+        <group col="2" colspan="4" id="csb_19" states="{'invisible': Eval('process_method') != 'csb19'}">
+            <separator string="CSB 19 Options" colspan="2" id="csb_19"/>
+            <label name="csb19_extra_concepts"/>
+            <field name="csb19_extra_concepts"/>
+            <label name="csb19_add_address"/>
+            <field name="csb19_add_address"/>
+        </group>
+    </xpath>
+</data>

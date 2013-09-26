@@ -1,0 +1,35 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.payment.journal,csb19_add_address:"
+msgid "Add address"
+msgstr "Afegeix adreça"
+
+msgctxt "field:account.payment.journal,csb19_extra_concepts:"
+msgid "Extra Concepts"
+msgstr "Conceptes extra"
+
+msgctxt "help:account.payment.journal,csb19_add_address:"
+msgid ""
+"Check it if you want to add the domicile of the owner of the bank account to the file.\n"
+"Annex 3 of CSB 19 norm."
+msgstr ""
+"Marqueu-lo si voleu afegir el domicili del titular del compte bancari al fitxer.\n"
+"Annex 3 de la norma CSB 19."
+
+msgctxt "help:account.payment.journal,csb19_extra_concepts:"
+msgid ""
+"Check it if you want to add the invoice lines to the extra concepts (Max. 15 lines).\n"
+"Annex 2 of CSB 19 norm."
+msgstr ""
+"Marqueu-lo si voleu afegir les línies de la factura als conceptes extra (màx. 15 línies).\n"
+"Annex 2 de la norma CSB 19."
+
+msgctxt "selection:account.payment.journal,process_method:"
+msgid "CSB 19"
+msgstr "CSB 19"
+
+msgctxt "view:account.payment.journal:"
+msgid "CSB 19 Options"
+msgstr "Opcions CSB 19"

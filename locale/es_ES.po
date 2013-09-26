@@ -1,0 +1,35 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.payment.journal,csb19_add_address:"
+msgid "Add address"
+msgstr "Añade dirección"
+
+msgctxt "field:account.payment.journal,csb19_extra_concepts:"
+msgid "Extra Concepts"
+msgstr "Conceptos extra"
+
+msgctxt "help:account.payment.journal,csb19_add_address:"
+msgid ""
+"Check it if you want to add the domicile of the owner of the bank account to the file.\n"
+"Annex 3 of CSB 19 norm."
+msgstr ""
+"Márquelo si quiere añadir el domicilio del propietario de la cuenta bancaria al fichero.\n"
+"Anexo 3 de la norma CSB 19."
+
+msgctxt "help:account.payment.journal,csb19_extra_concepts:"
+msgid ""
+"Check it if you want to add the invoice lines to the extra concepts (Max. 15 lines).\n"
+"Annex 2 of CSB 19 norm."
+msgstr ""
+"Márquelo si quiere añadir las líneas de factura a los conceptos extra (máx. 15 líneas).\n"
+" Anexo 2 de la norma CSB 19."
+
+msgctxt "selection:account.payment.journal,process_method:"
+msgid "CSB 19"
+msgstr "CSB 19"
+
+msgctxt "view:account.payment.journal:"
+msgid "CSB 19 Options"
+msgstr "Opciones CSB 19"
