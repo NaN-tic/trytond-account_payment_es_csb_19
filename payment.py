@@ -216,7 +216,9 @@ class Group:
             'fifteenth_field_concept',
             'sixteenth_field_concept',
             )
-        field = {key: '' for key in keys}
+        field = {}
+        for key in keys:
+            field[key] = ''
 
         text = set_presenter_header_record() + '\r\n'
         values['record_count'] += 1
