@@ -99,7 +99,7 @@ class Group:
             record.name = receipt['name']
             record.account = receipt['bank_account']
             record.amount = receipt['amount']
-            record.concept = receipt['communication']
+            record.concept = receipt['communication'][:40]
             return write([record])
 
         def set_first_optional_individual_record():
@@ -220,13 +220,13 @@ class Group:
         for key in keys:
             field[key] = ''
 
-        text = set_presenter_header_record() + '\r\n'
+        text = set_presenter_header_record()
         values['record_count'] += 1
-        text += set_ordering_header_record() + '\r\n'
+        text += set_ordering_header_record()
         values['record_count'] += 1
         for receipt in values['receipts']:
             values['required_count'] += 1
-            text += set_required_individual_record() + '\r\n'
+            text += set_required_individual_record()
             values['record_count'] += 1
             if values['extra_concepts']:
                 concepts = []
@@ -238,26 +238,26 @@ class Group:
                 for (key, receipt['communication']) in zip(keys, concepts):
                     field[key] = receipt['communication']
                 if field['second_field_concept']:
-                    text += set_first_optional_individual_record() + '\r\n'
+                    text += set_first_optional_individual_record()
                     values['record_count'] += 1
                 if field['fifth_field_concept']:
-                    text += set_second_optional_individual_record() + '\r\n'
+                    text += set_second_optional_individual_record()
                     values['record_count'] += 1
                 if field['eighth_field_concept']:
-                    text += set_third_optional_individual_record() + '\r\n'
+                    text += set_third_optional_individual_record()
                     values['record_count'] += 1
                 if field['eleventh_field_concept']:
-                    text += set_fourth_optional_individual_record() + '\r\n'
+                    text += set_fourth_optional_individual_record()
                     values['record_count'] += 1
                 if field['fourteenth_field_concept']:
-                    text += set_fifth_optional_individual_record() + '\r\n'
+                    text += set_fifth_optional_individual_record()
                     values['record_count'] += 1
-                text += set_sixth_optional_individual_record() + '\r\n'
+                text += set_sixth_optional_individual_record()
                 values['record_count'] += 1
             elif values['add_address']:
-                text += set_sixth_optional_individual_record() + '\r\n'
+                text += set_sixth_optional_individual_record()
                 values['record_count'] += 1
-        text += set_ordering_footer_record() + '\r\n'
+        text += set_ordering_footer_record()
         values['record_count'] += 2
         text += set_presenter_footer_record()
         group.attach_file(text)
