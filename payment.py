@@ -99,7 +99,7 @@ class Group:
             record.name = receipt['name']
             record.account = receipt['bank_account']
             record.amount = receipt['amount']
-            record.concept = receipt['communication']
+            record.concept = receipt['communication'][:40]
             return write([record])
 
         def set_first_optional_individual_record():
