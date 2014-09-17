@@ -46,7 +46,6 @@ class Group:
         values['extra_concepts'] = values['payment_journal'].\
             csb19_extra_concepts
         values['add_address'] = values['payment_journal'].csb19_add_address
-        values['bank_account'] = values['bank_account'].numbers[0].number
         values['record_count'] = 0
         values['procedure'] = '01'
         values['ordering_count'] = 1
@@ -57,7 +56,6 @@ class Group:
                 self.raise_user_error('configuration_error',
                     error_description='party_without_address',
                     error_description_args=(receipt['name'],))
-            receipt['bank_account'] = receipt['bank_account'].numbers[0].number
             receipt['party_code'] = receipt['party'].code
         return values
 
