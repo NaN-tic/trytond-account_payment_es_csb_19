@@ -4,6 +4,7 @@
 # the full copyright notices and license terms.
 from trytond.model import fields
 from trytond.pool import PoolMeta
+from trytond.pyson import Eval
 import logging
 
 try:
@@ -38,6 +39,16 @@ class Journal:
             cls.process_method.selection.extend([
                 ('csb19', 'CSB 19'),
                 ])
+
+    @classmethod
+    def view_attributes(cls):
+        attributes = super(Journal, cls).view_attributes()
+        attributes.append(
+            ('/form/group[@id="csb_19"]', 'states', {
+                    'invisible': Eval('process_method') != 'csb19',
+                    })
+                )
+        return attributes
 
 
 class Group:
