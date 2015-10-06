@@ -76,7 +76,7 @@ class Group:
             record = Record(c19.PRESENTER_HEADER_RECORD)
             record.record_code = '51'
             record.data_code = '80'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.creation_date = values['creation_date']
             record.name = values['company_name']
@@ -88,7 +88,7 @@ class Group:
             record = Record(c19.ORDERING_HEADER_RECORD)
             record.record_code = '53'
             record.data_code = '80'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.creation_date = values['creation_date']
             record.payment_date = values['payment_date']
@@ -101,7 +101,7 @@ class Group:
             record = Record(c19.REQUIRED_INDIVIDUAL_RECORD)
             record.record_code = '56'
             record.data_code = '80'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.reference_code = receipt['party_code']
             record.name = receipt['name']
@@ -114,7 +114,7 @@ class Group:
             record = Record(c19.FIRST_OPTIONAL_INDIVIDUAL_RECORD)
             record.record_code = '56'
             record.data_code = '81'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.reference_code = receipt['party_code']
             record.second_field_concept = field['second_field_concept']
@@ -126,7 +126,7 @@ class Group:
             record = Record(c19.SECOND_OPTIONAL_INDIVIDUAL_RECORD)
             record.record_code = '56'
             record.data_code = '82'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.reference_code = receipt['party_code']
             record.fifth_field_concept = field['fifth_field_concept']
@@ -138,7 +138,7 @@ class Group:
             record = Record(c19.THIRD_OPTIONAL_INDIVIDUAL_RECORD)
             record.record_code = '56'
             record.data_code = '83'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.reference_code = receipt['party_code']
             record.eighth_field_concept = field['eighth_field_concept']
@@ -150,7 +150,7 @@ class Group:
             record = Record(c19.FOURTH_OPTIONAL_INDIVIDUAL_RECORD)
             record.record_code = '56'
             record.data_code = '84'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.reference_code = receipt['party_code']
             record.eleventh_field_concept = field['eleventh_field_concept']
@@ -162,7 +162,7 @@ class Group:
             record = Record(c19.FIFTH_OPTIONAL_INDIVIDUAL_RECORD)
             record.record_code = '56'
             record.data_code = '85'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.reference_code = receipt['party_code']
             record.fourteenth_field_concept = field['fourteenth_field_concept']
@@ -174,7 +174,7 @@ class Group:
             record = Record(c19.SIXTH_OPTIONAL_INDIVIDUAL_RECORD)
             record.record_code = '56'
             record.data_code = '86'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.reference_code = receipt['party_code']
             record.name = receipt['name']
@@ -187,7 +187,7 @@ class Group:
             record = Record(c19.ORDERING_FOOTER_RECORD)
             record.record_code = '58'
             record.data_code = '80'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.amount_sum = values['amount']
             record.required_count = str(values['required_count'])
@@ -198,7 +198,7 @@ class Group:
             record = Record(c19.PRESENTER_FOOTER_RECORD)
             record.record_code = '59'
             record.data_code = '80'
-            record.nif = values['vat_number']
+            record.nif = values['vat_code']
             record.suffix = values['suffix']
             record.ordering_count = str(values['ordering_count'])
             record.amount_sum = values['amount']
